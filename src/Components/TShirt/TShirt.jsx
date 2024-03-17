@@ -1,12 +1,12 @@
 import "./Tshirt.css";
 
-const TShirt = ({ tshirt }) => {
-  const { name, price, picture } = tshirt;
+const TShirt = ({ tshirt, handleAddToCart }) => {
+  const { name, price, picture, _id } = tshirt;
   return (
     <div className="tshirt">
       <img src={picture} alt="" />
       <p>{name}</p>
-      <button>Buy Now</button>
+      <button onClick={() => handleAddToCart(_id)}>Buy Now</button>
     </div>
   );
 };
