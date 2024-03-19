@@ -10,6 +10,7 @@ import Main from "./Components/Layout/Main.jsx";
 import Home from "./Components/Home/Home.jsx";
 import OrderReview from "./Components/OrderReview.jsx/OrderReview.jsx";
 import Contact from "./Components/Contact/Contact.jsx";
+import GrandPa from "./Components/GrandPa/GrandPa.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/grandpa",
+        element: <GrandPa />,
       },
     ],
   },

@@ -1,3 +1,4 @@
+import "./Cart.css";
 const Cart = ({ cart, handleRemoveFromCart }) => {
   console.log(cart);
 
@@ -11,8 +12,13 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
 
   return (
     <div>
-      <h4>Order Summary: {cart.length}</h4>
+      <h4 className={cart.length === 1 ? "red" : "blue"}>
+        Order Summary: {cart.length}
+      </h4>
 
+      <h1 className={`yellow ${cart.length > 2 ? "text-blue" : "text-brown"}`}>
+        Sample Text
+      </h1>
       <h4>{massage}</h4>
 
       {cart.length > 3 ? (
@@ -27,7 +33,9 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
         </p>
       ))}
 
-      {cart.length === 2 && <h3>You get Double Bonus</h3>}
+      {cart.length === 2 || <h3>hit the 2</h3>}
+
+      {cart.length === 4 && <h3>Oho! You are soooo rich!!!</h3>}
     </div>
   );
 };
